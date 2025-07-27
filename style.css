@@ -148,7 +148,22 @@ button:hover {
   outline: none;
   border-bottom: 2px solid var(--primary);
 }
-
+.cbo-results {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.cbo-results li {
+  padding: 8px;
+  cursor: pointer;
+}
+.cbo-results li:hover {
+  background: #f0f0f0;
+}
 textarea {
   border: 1px solid #fdfdfd;
   border-radius: 6px;
@@ -172,6 +187,13 @@ textarea:focus {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
   .linha {

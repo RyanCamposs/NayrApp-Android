@@ -20,7 +20,7 @@
         <button onclick="abrirFormulario('ficha1')">Ficha 31 - Profissional</button>
         <button onclick="abrirFormulario('ficha2')">Ficha 1 - Módulo Básico [Empresa]</button>
         <h2>Outros Aquivos:</h3>
-       <button onclick="abrirFormulario('ficha3')">Lista de CBO's</button>
+       <button onclick="abrirFormulario('ficha3')" >Lista de CBO's</button>
       </div>
     </section>
 
@@ -33,14 +33,29 @@
       <form id="formConteudo"></form>
       <div class="form-buttons">
         <button onclick="voltarMenu()">Voltar</button>
-        <button onclick="gerarPDF()">Gerar PDF</button>
+        <button onclick="gerarPDF()" id="btn-remove">Gerar PDF</button>
+        <button class="hidden" id="btn-copy">Copiar CBO</button>
       </div>
     </section>
   </main>
   
+  <footer>
+    <section>
+      <div></div>
+      <div></div>
+    </section>
+  </footer>
+
+
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
   <script src="script.js"></script>
   <script src="cordova.js"></script>
+  <script src="theme.js"></script>
+  <script src="./forms/forms.js"></script>
+  <script src="pdf-generator.js"></script>
 </body>
 </html>
