@@ -188,9 +188,53 @@ textarea:focus {
   flex-wrap: wrap;
 }
 
+/* PARTE DO RODAPÉ */
+footer {
+  background-color: #ffffff;
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  
+}
+
+.box-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-size: 17px;
+}
+
+.box1 {
+  width: 30%;
+  padding: 5rem
+}
+
+.box2 {
+  width: 30%;
+  padding: 5rem;
+}
+
+.div-box {
+  text-align: center;
+}
+
+.div-box a{
+  text-decoration: none;
+  list-style: none;
+  color: rgb(255, 0, 0);
+  word-break: normal;
+}
+
+.div-box a:hover {
+  font-size:18px;
+}
 
 
-
+li {
+  list-style: none;
+}
 
 
 
@@ -206,5 +250,9 @@ textarea:focus {
 
   button {
     width: 100%;
+  }
+
+  footer {
+    max-width:100%;
   }
 }
