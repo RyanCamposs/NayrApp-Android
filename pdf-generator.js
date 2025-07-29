@@ -146,10 +146,55 @@ async function gerarPDF() {
                 ['CNPJ', campos['CNPJ']]
             ]; 
             addTableSection('DADOS DO ESTABELECIMENTO', establishmentFields);
-
-            // Seção: Observações
             addObservations(campos['Observações']);
-        } else if (formTitle === "Ficha de Serviço") {   
+
+
+            
+        } else if (formTitle === "Ficha de Profissional Com Equipe") {
+            const professionalFields = [
+                ['Nome completo', campos['Nome completo']],
+                ['CPF', campos['CPF']],
+                ['CNS', campos['CNS']],
+                ['Nome da Mãe', campos['Nome da Mãe']],
+                ['Nome do Pai', campos['Nome do Pai']],
+                ['Data de Nascimento', campos['Nascimento']],
+                ['Municipio', campos['Municipio']],
+                ['UF', campos['UF']],
+                ['Telefone', campos['Telefone']],
+                ['Email', campos['Email']]
+            ];
+            addTableSection('DADOS DO PROFISSIONAL', professionalFields);
+
+            // Seção: Dados do Estabelecimento
+            const establishmentFields = [
+                ['CNES', campos['CNES']],
+                ['Nome fantasia do Estabelecimento', campos['Nome fantasia do Estabelecimento']],
+                ['CBO/Especialidade', campos['CBO/Especialidade']],
+                ['Atend.SUS', campos['Atend.SUS']],
+                ['CH Amb.', campos['Amb']],
+                ['CH Hosp', campos['Hosp']],
+                ['CH Outros', campos['Outros']],
+                ['Registro no Conselho de Classe', campos['Registro no Conselho de Classe']],
+                ['Órgão Emissor', campos['Órgão Emissor']],
+                ['UF', campos['UF Estab']],
+                ['Forma de Contratação com o Estabelecimento', campos['Forma de Contratação com o Estabelecimento']],
+                ['Forma de Contratação com o Empregador', campos['Forma de Contratação com o Empregador']],
+                ['Detalhamento da Forma de Contratação', campos['Detalhamento da Forma de Contratação']],
+                ['CNPJ', campos['CNPJ']],
+        
+            ]; 
+            addTableSection('DADOS DO PROFISSIONAL', establishmentFields);
+        
+                const dadosDaEquipe = [
+                    ['INE da Equipe', campos['INE da Equipe']],
+                    ['Tipificação da Equipe', campos['Tipificação da Equipe']],
+                    ['Pertencente a equipe minima?', campos['Pertencente a equipe minima?']]
+                ]
+                 addTableSection('Dados da Equipe', dadosDaEquipe);
+
+                 addObservations(campos['Observações']);
+
+        }else if (formTitle === "Ficha de Serviço") {   
          
             const professionalFields = [
                 ['CNPJ da Empresa', campos['CNPJ da Empresa']],

@@ -138,7 +138,7 @@ function abrirFormulario(tipo) {
                 <textarea name="Observações" rows="4" style="width:100%"></textarea>
             </section>
         `;
-    } else if (tipo === "ficha2") {
+    } else if (tipo === "ficha31") {
         formTitle.textContent = "Ficha de Serviço";
         formConteudo.innerHTML = `
             <section class="ficha">
@@ -224,7 +224,158 @@ function abrirFormulario(tipo) {
                     </div>
                   </section
         `;
-    } else if (tipo === "ficha3") {
+    }if (tipo === "ficha32") {   
+        document.getElementById("btn-copy").classList.add("hidden");
+        formTitle.textContent = "Ficha de Profissional Com Equipe";
+        formConteudo.innerHTML = `
+            <section class="ficha">
+                <h2>DADOS DO PROFISSIONAL</h2>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Nome completo:</span>
+                        <input type="text" name="Nome completo" required />
+                    </div>
+                    <div class="campo">
+                        <span>CPF:</span>
+                        <input type="text" name="CPF" />
+                    </div>
+                    <div class="campo">
+                        <span>CNS:</span>
+                        <input type="text" name="CNS" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Nome da Mãe:</span>
+                        <input type="text" name="Nome da Mãe" />
+                    </div>
+                    <div class="campo">
+                        <span>Nome do Pai:</span>
+                        <input type="text" name="Nome do Pai" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Data de Nascimento:</span>
+                        <input type="date" name="Nascimento" />
+                    </div>
+                    <div class="campo">
+                        <span>Municipio:</span>
+                        <input type="text" name="Municipio" />
+                    </div>
+                    <div class="campo">
+                        <span>UF:</span>
+                        <input type="text" name="UF" maxlength="2" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Telefone:</span>
+                        <input type="tel" name="Telefone" />
+                    </div>
+                    <div class="campo">
+                        <span>Email:</span>
+                        <input type="email" name="Email" />
+                    </div>
+                </div>
+            </section>
+            <section class="ficha">  
+                <h2>DADOS DO ESTABELECIMENTO</h2>  
+                <div class="linha">
+                    <div class="campo">
+                        <span>CNES:</span>
+                        <input type="text" name="CNES" />
+                    </div>
+                    <div class="campo">
+                        <span>Nome fantasia do Estabelecimento:</span>
+                        <input type="text" name="Nome fantasia do Estabelecimento" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>CBO/Especialidade:</span>
+                        <input type="text" name="CBO/Especialidade" />
+                    </div>
+                    <div class="campo">
+                        <span>Atend.SUS:</span>
+                        <input type="text" name="Atend.SUS" />
+                    </div>
+                    <div class="campo">
+                        <span>CH Amb.:</span>
+                        <input type="text" name="Amb" />
+                    </div>
+                    <div class="campo">
+                        <span>CH Hosp:</span>
+                        <input type="text" name="Hosp" />
+                    </div>
+                    <div class="campo">
+                        <span>CH Outros:</span>
+                        <input type="text" name="Outros" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Registro no Conselho de Classe:</span>
+                        <input type="text" name="Registro no Conselho de Classe" />
+                    </div>
+                    <div class="campo">
+                        <span>Órgão Emissor:</span>
+                        <input type="text" name="Órgão Emissor" />
+                    </div>
+                    <div class="campo">
+                        <span>UF:</span>
+                        <input type="text" name="UF Estab" maxlength="2" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Forma de Contratação com o Estabelecimento:</span>
+                        <input type="text" name="Forma de Contratação com o Estabelecimento" />
+                    </div>
+                    <div class="campo">
+                        <span>Forma de Contratação:</span>
+                        <input type="text" name="Forma de Contratação com o Empregador" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Detalhamento da Forma de Contratação:</span>
+                        <input type="text" name="Detalhamento da Forma de Contratação" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>CNPJ:</span>
+                        <input type="text" name="CNPJ"/>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ficha"> 
+                <div class="linha">
+                    <div class="campo">
+                        <span>INE da Equipe</span>
+                        <input type="text" name="INE da Equipe"/>
+                    </div>
+                    <div class="campo">
+                        <span>Tipificação da Equipe</span>
+                        <input type="text" name="Tipificação da Equipe"/>
+                    </div>
+                    </div>
+                    <div class="linha">
+                        <div class="campo"> 
+                            <span>Pertencente a equipe minima?</span>
+                            <input type="text" name="Pertencente a equipe minima?"/>
+                        </div>    
+                </div>
+            </section>
+            <section class="ficha">
+                <h2>OBSERVAÇÕES</h2>
+                <textarea name="Observações" rows="4" style="width:100%"></textarea>
+            </section> 
+        `
+
+    }else if (tipo === "listacbo") {
         document.getElementById("btn-remove").classList.add("hidden");
         document.getElementById("btn-copy").classList.remove("hidden");
         formTitle.textContent = "Lista de CBO";
@@ -265,23 +416,15 @@ function abrirFormulario(tipo) {
                 results.innerHTML = '';
             };
 
-            if(input.value != null) {
-                let btn = document.getElementById("btn-copy");
-                btn.addEventListener('click', function() {
-                    navigator.clipboard.writeText(input.value);
-                    console.log("result is already");
-                    alert('oláaaa yoselinnn, vc acabou de passar nesse teste');
-                    
-                    
-                });
-            } else {
-                alert('erro no loop')
-            }
+            // Evento para copiar o cbo (botão)     
+            let btn = document.getElementById("btn-copy");
+            btn.addEventListener('click', function() {
+            navigator.clipboard.writeText(input.value);                   
+            });
             
+
             results.appendChild(li);
-
-
-            
+       
             });
         });
         })
@@ -289,6 +432,16 @@ function abrirFormulario(tipo) {
         console.error('Erro ao carregar lista de CBO', err);
         formConteudo.innerHTML += `<p style="color:red">Não foi possível carregar a lista de CBO.</p>`;
         });
+    }if (tipo === "futuro") {
+        document.getElementById("btn-remove").classList.remove("hidden");
+        document.getElementById("btn-copy").classList.add("hidden");
+        formTitle.textContent = "Lista de CBO";
+        formConteudo.innerHTML = `
+        <section class="ficha">
+            <h1>Página em construção</h1>
+
+        </section>
+        `
     }
     }
 
