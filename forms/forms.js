@@ -9,6 +9,8 @@ function abrirFormulario(tipo) {
 
     // DESIGN FICHAS NAVEGADOR 
     if (tipo === "ficha1") {
+        document.getElementById("btn-copy").classList.add("hidden");
+        document.getElementById("btn-remove").classList.remove("hidden")
         formTitle.textContent = "Ficha de Cliente";
         formConteudo.innerHTML = `
             <section class="ficha">
@@ -139,6 +141,8 @@ function abrirFormulario(tipo) {
             </section>
         `;
     } else if (tipo === "ficha31") {
+        document.getElementById("btn-copy").classList.add("hidden");
+        document.getElementById("btn-remove").classList.remove("hidden")
         formTitle.textContent = "Ficha de Serviço";
         formConteudo.innerHTML = `
             <section class="ficha">
@@ -226,6 +230,7 @@ function abrirFormulario(tipo) {
         `;
     }if (tipo === "ficha32") {   
         document.getElementById("btn-copy").classList.add("hidden");
+        document.getElementById("btn-remove").classList.remove("hidden")
         formTitle.textContent = "Ficha de Profissional Com Equipe";
         formConteudo.innerHTML = `
             <section class="ficha">
