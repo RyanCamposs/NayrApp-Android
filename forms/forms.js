@@ -415,16 +415,16 @@ function abrirFormulario(tipo) {
                 input.value = `${item.nome} - ${item.codigo}` ;
                 results.innerHTML = '';
             };
-
-            // Evento para copiar o cbo (botão)     
+        
+            // Evento para copiar o cbo (botão) 
+            let result = document.getElementById("result")    
             let btn = document.getElementById("btn-copy");
             btn.addEventListener('click', function() {
-            navigator.clipboard.writeText(input.value);                   
+            navigator.clipboard.writeText(input.value);  
+            result.innerHTML = `CBO copiado com sucesso!`              
             });
-            
-
+        
             results.appendChild(li);
-       
             });
         });
         })
