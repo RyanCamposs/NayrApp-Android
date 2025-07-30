@@ -425,8 +425,7 @@ function abrirFormulario(tipo) {
             let result = document.getElementById("result")    
             let btn = document.getElementById("btn-copy");
             btn.addEventListener('click', function() {
-            navigator.clipboard.writeText(input.value);  
-            result.innerHTML = `CBO copiado com sucesso!`              
+            navigator.clipboard.writeText(input.value);               
             });
         
             results.appendChild(li);
