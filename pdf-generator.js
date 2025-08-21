@@ -112,15 +112,15 @@ async function gerarPDF() {
         addHeader();
         addFooter();
 
-        // Seção: Dados do Profissional (apenas para Ficha 1)
-        if (formTitle === "Ficha de Cliente") {
+        // Seção: Dados do Profissional ( Ficha 31)
+        if (formTitle === "ficha31") {
             const professionalFields = [
                 ['Nome completo', campos['Nome completo']],
                 ['CPF', campos['CPF']],
                 ['CNS', campos['CNS']],
                 ['Nome da Mãe', campos['Nome da Mãe']],
                 ['Nome do Pai', campos['Nome do Pai']],
-                ['Data de Nascimento', campos['Nascimento']],
+                ['Data de Nascimento', campos['Data de Nascimento']],
                 ['Municipio', campos['Municipio']],
                 ['UF', campos['UF']],
                 ['Telefone', campos['Telefone']],
@@ -134,30 +134,36 @@ async function gerarPDF() {
                 ['Nome fantasia do Estabelecimento', campos['Nome fantasia do Estabelecimento']],
                 ['CBO/Especialidade', campos['CBO/Especialidade']],
                 ['Atend.SUS', campos['Atend.SUS']],
-                ['CH Amb.', campos['Amb']],
-                ['CH Hosp', campos['Hosp']],
-                ['CH Outros', campos['Outros']],
+                ['CH Amb.', campos['CH Amb.']],
+                ['CH Hosp', campos['CH Hosp']],
+                ['CH Outros', campos['CH Outros']],
                 ['Registro no Conselho de Classe', campos['Registro no Conselho de Classe']],
                 ['Órgão Emissor', campos['Órgão Emissor']],
-                ['UF', campos['UF Estab']],
                 ['Forma de Contratação com o Estabelecimento', campos['Forma de Contratação com o Estabelecimento']],
                 ['Forma de Contratação com o Empregador', campos['Forma de Contratação com o Empregador']],
                 ['Detalhamento da Forma de Contratação', campos['Detalhamento da Forma de Contratação']],
-                ['CNPJ', campos['CNPJ']]
+                ['CNPJ', campos['CNPJ']],
+                ['UF Conselho', campos['UF Conselho']]
             ]; 
             addTableSection('DADOS DO ESTABELECIMENTO', establishmentFields);
             addObservations(campos['Observações']);
 
 
-            
-        } else if (formTitle === "Ficha de Profissional Com Equipe") {
+
+
+// --------------------------------------------------------------------------------------
+
+
+
+            // FICHA PROFISSIONAL COM EQUIPE (PDF)
+        } else if (formTitle === "ficha32") {
             const professionalFields = [
                 ['Nome completo', campos['Nome completo']],
                 ['CPF', campos['CPF']],
                 ['CNS', campos['CNS']],
                 ['Nome da Mãe', campos['Nome da Mãe']],
                 ['Nome do Pai', campos['Nome do Pai']],
-                ['Data de Nascimento', campos['Nascimento']],
+                ['Data de Nascimento', campos['Data de Nascimento']],
                 ['Municipio', campos['Municipio']],
                 ['UF', campos['UF']],
                 ['Telefone', campos['Telefone']],
@@ -171,12 +177,12 @@ async function gerarPDF() {
                 ['Nome fantasia do Estabelecimento', campos['Nome fantasia do Estabelecimento']],
                 ['CBO/Especialidade', campos['CBO/Especialidade']],
                 ['Atend.SUS', campos['Atend.SUS']],
-                ['CH Amb.', campos['Amb']],
-                ['CH Hosp', campos['Hosp']],
-                ['CH Outros', campos['Outros']],
+                ['CH Amb.', campos['CH Amb.']],
+                ['CH Hosp', campos['CH Hosp']],
+                ['CH Outros', campos['CH Outros']],
                 ['Registro no Conselho de Classe', campos['Registro no Conselho de Classe']],
                 ['Órgão Emissor', campos['Órgão Emissor']],
-                ['UF', campos['UF Estab']],
+                ['UF Conselho', campos['UF Conselho']],
                 ['Forma de Contratação com o Estabelecimento', campos['Forma de Contratação com o Estabelecimento']],
                 ['Forma de Contratação com o Empregador', campos['Forma de Contratação com o Empregador']],
                 ['Detalhamento da Forma de Contratação', campos['Detalhamento da Forma de Contratação']],
@@ -194,8 +200,7 @@ async function gerarPDF() {
 
                  addObservations(campos['Observações']);
 
-        }else if (formTitle === "Ficha de Serviço") {   
-         
+        } else if (formTitle === "ficha1") {   // FICHA 1 PDF
             const professionalFields = [
                 ['CNPJ da Empresa', campos['CNPJ da Empresa']],
                 ['CNES da Empresa', campos['CNES da Empresa']],
@@ -219,30 +224,9 @@ async function gerarPDF() {
                 ['Órgão Expedidor', campos['Órgão Expedidor']],
             ];
             addTableSection('DADOS DO ESTABELECIMENTO', establishmentFields);
-        } else if (formTitle === "Lista de CBO") {
-            const professionalFields = [
-                ['CNPJ da Empresa', campos['CNPJ da Empresa']],
-                ['CNES da Empresa', campos['CNES da Empresa']],
-                ['Situação', campos['Situacao']],
-                ['Tipo de Estabelecimento', campos['Tipo de Estabelecimento']],
-                ['Razão Social', campos['Razão Social']],
-                ['Nome Fantasia', campos['Nome Fantasia']],
-                ['Logradouro', campos['Logradouro']],
-                ['Numero', campos['Numero']],
-                ['Bairro', campos['Bairro']],
-                ['Municipio', campos['Municipio']]
-            ];
-            addTableSection('DADOS DO PROFISSIONAL', professionalFields);
 
-            // Seção: Dados do Estabelecimento
-            const establishmentFields = [
-                ['Diretor da Empresa', campos['Diretor da Empresa']],
-                ['Registro Conselho de Classe', campos['Registro Conselho de Classe']],
-                ['Numero do Alvara', campos['Numero do Alvara']],
-                ['Data de Expedição', campos['Data de Expedição']],
-                ['Órgão Expedidor', campos['Órgão Expedidor']],
-            ];
-        }
+
+        } 
 
         // Campo de assinatura
         checkPageBreak(20);

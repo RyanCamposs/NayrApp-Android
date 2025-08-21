@@ -8,142 +8,11 @@ function abrirFormulario(tipo) {
     formConteudo.innerHTML = "";
 
     // DESIGN FICHAS NAVEGADOR 
-    if (tipo === "ficha1") {
+    
+     if (tipo === "ficha1") {
         document.getElementById("btn-copy").classList.add("hidden");
         document.getElementById("btn-remove").classList.remove("hidden")
-        formTitle.textContent = "Ficha de Cliente";
-        formConteudo.innerHTML = `
-            <section class="ficha">
-                <h2>DADOS DO PROFISSIONAL</h2>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Nome completo:</span>
-                        <input type="text" name="Nome completo" required />
-                    </div>
-                    <div class="campo">
-                        <span>CPF:</span>
-                        <input type="text" name="CPF" />
-                    </div>
-                    <div class="campo">
-                        <span>CNS:</span>
-                        <input type="text" name="CNS" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Nome da Mãe:</span>
-                        <input type="text" name="Nome da Mãe" />
-                    </div>
-                    <div class="campo">
-                        <span>Nome do Pai:</span>
-                        <input type="text" name="Nome do Pai" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Data de Nascimento:</span>
-                        <input type="date" name="Nascimento" />
-                    </div>
-                    <div class="campo">
-                        <span>Municipio:</span>
-                        <input type="text" name="Municipio" />
-                    </div>
-                    <div class="campo">
-                        <span>UF:</span>
-                        <input type="text" name="UF" maxlength="2" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Telefone:</span>
-                        <input type="tel" name="Telefone" />
-                    </div>
-                    <div class="campo">
-                        <span>Email:</span>
-                        <input type="email" name="Email" />
-                    </div>
-                </div>
-            </section>
-            <section class="ficha">  
-                <h2>DADOS DO ESTABELECIMENTO</h2>  
-                <div class="linha">
-                    <div class="campo">
-                        <span>CNES:</span>
-                        <input type="text" name="CNES" />
-                    </div>
-                    <div class="campo">
-                        <span>Nome fantasia do Estabelecimento:</span>
-                        <input type="text" name="Nome fantasia do Estabelecimento" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>CBO/Especialidade:</span>
-                        <input type="text" name="CBO/Especialidade" />
-                    </div>
-                    <div class="campo">
-                        <span>Atend.SUS:</span>
-                        <input type="text" name="Atend.SUS" />
-                    </div>
-                    <div class="campo">
-                        <span>CH Amb.:</span>
-                        <input type="text" name="Amb" />
-                    </div>
-                    <div class="campo">
-                        <span>CH Hosp:</span>
-                        <input type="text" name="Hosp" />
-                    </div>
-                    <div class="campo">
-                        <span>CH Outros:</span>
-                        <input type="text" name="Outros" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Registro no Conselho de Classe:</span>
-                        <input type="text" name="Registro no Conselho de Classe" />
-                    </div>
-                    <div class="campo">
-                        <span>Órgão Emissor:</span>
-                        <input type="text" name="Órgão Emissor" />
-                    </div>
-                    <div class="campo">
-                        <span>UF:</span>
-                        <input type="text" name="UF Estab" maxlength="2" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Forma de Contratação com o Estabelecimento:</span>
-                        <input type="text" name="Forma de Contratação com o Estabelecimento" />
-                    </div>
-                    <div class="campo">
-                        <span>Forma de Contratação:</span>
-                        <input type="text" name="Forma de Contratação com o Empregador" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>Detalhamento da Forma de Contratação:</span>
-                        <input type="text" name="Detalhamento da Forma de Contratação" />
-                    </div>
-                </div>
-                <div class="linha">
-                    <div class="campo">
-                        <span>CNPJ:</span>
-                        <input type="text" name="CNPJ"/>
-                    </div>
-                </div>
-            </section>
-            <section class="ficha">
-                <h2>OBSERVAÇÕES</h2>
-                <textarea name="Observações" rows="4" style="width:100%"></textarea>
-            </section>
-        `;
-    } else if (tipo === "ficha31") {
-        document.getElementById("btn-copy").classList.add("hidden");
-        document.getElementById("btn-remove").classList.remove("hidden")
-        formTitle.textContent = "Ficha de Serviço";
+        formTitle.textContent = "ficha1";
         formConteudo.innerHTML = `
             <section class="ficha">
                 <h2>DADOS DO ESTABELECIMENTO - 1</h2>
@@ -226,12 +95,15 @@ function abrirFormulario(tipo) {
                         <span>Órgão Expedidor</span>
                         <input type="text" name="Órgão Expedidor" />
                     </div>
-                  </section
-        `;
-    }if (tipo === "ficha32") {   
+                  </section>
+       `;
+    }
+    
+    
+    else if (tipo === "ficha31") {
         document.getElementById("btn-copy").classList.add("hidden");
         document.getElementById("btn-remove").classList.remove("hidden")
-        formTitle.textContent = "Ficha de Profissional Com Equipe";
+        formTitle.textContent = "ficha31";
         formConteudo.innerHTML = `
             <section class="ficha">
                 <h2>DADOS DO PROFISSIONAL</h2>
@@ -328,8 +200,8 @@ function abrirFormulario(tipo) {
                         <input type="text" name="Órgão Emissor" />
                     </div>
                     <div class="campo">
-                        <span>UF:</span>
-                        <input type="text" name="UF Estab" maxlength="2" />
+                        <span>UF Conselho:</span>
+                        <input type="text" name="UF Conselho" maxlength="2" />
                     </div>
                 </div>
                 <div class="linha">
@@ -338,7 +210,144 @@ function abrirFormulario(tipo) {
                         <input type="text" name="Forma de Contratação com o Estabelecimento" />
                     </div>
                     <div class="campo">
-                        <span>Forma de Contratação:</span>
+                        <span>Forma de Contratação com o Empregador:</span>
+                        <input type="text" name="Forma de Contratação com o Empregador" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Detalhamento da Forma de Contratação:</span>
+                        <input type="text" name="Detalhamento da Forma de Contratação" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>CNPJ:</span>
+                        <input type="text" name="CNPJ"/>
+                    </div>
+                </div>
+            </section>
+            <section class="ficha">
+                <h2>OBSERVAÇÕES</h2>
+                <textarea name="Observações" rows="4" style="width:100%"></textarea>
+            </section>
+        `;
+    } 
+    
+    
+    
+    // FICHA 32 PROFISSIONAL COM EQUIPE
+    else if (tipo === "ficha32") {
+        document.getElementById("btn-copy").classList.add("hidden");
+        document.getElementById("btn-remove").classList.remove("hidden")
+        formTitle.textContent = "ficha32";
+        formConteudo.innerHTML = `
+            <section class="ficha">
+                <h2>DADOS DO PROFISSIONAL</h2>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Nome completo:</span>
+                        <input type="text" name="Nome completo" required />
+                    </div>
+                    <div class="campo">
+                        <span>CPF:</span>
+                        <input type="text" name="CPF" />
+                    </div>
+                    <div class="campo">
+                        <span>CNS:</span>
+                        <input type="text" name="CNS" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Nome da Mãe:</span>
+                        <input type="text" name="Nome da Mãe" />
+                    </div>
+                    <div class="campo">
+                        <span>Nome do Pai:</span>
+                        <input type="text" name="Nome do Pai" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Data de Nascimento:</span>
+                        <input type="date" name="Nascimento" />
+                    </div>
+                    <div class="campo">
+                        <span>Municipio:</span>
+                        <input type="text" name="Municipio" />
+                    </div>
+                    <div class="campo">
+                        <span>UF:</span>
+                        <input type="text" name="UF" maxlength="2" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Telefone:</span>
+                        <input type="tel" name="Telefone" />
+                    </div>
+                    <div class="campo">
+                        <span>Email:</span>
+                        <input type="email" name="Email" />
+                    </div>
+                </div>
+            </section>
+            <section class="ficha">  
+                <h2>DADOS DO ESTABELECIMENTO</h2>  
+                <div class="linha">
+                    <div class="campo">
+                        <span>CNES:</span>
+                        <input type="text" name="CNES" />
+                    </div>
+                    <div class="campo">
+                        <span>Nome fantasia do Estabelecimento:</span>
+                        <input type="text" name="Nome fantasia do Estabelecimento" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>CBO/Especialidade:</span>
+                        <input type="text" name="CBO/Especialidade" />
+                    </div>
+                    <div class="campo">
+                        <span>Atend.SUS:</span>
+                        <input type="text" name="Atend.SUS" />
+                    </div>
+                    <div class="campo">
+                        <span>CH Amb.:</span>
+                        <input type="text" name="Amb" />
+                    </div>
+                    <div class="campo">
+                        <span>CH Hosp:</span>
+                        <input type="text" name="Hosp" />
+                    </div>
+                    <div class="campo">
+                        <span>CH Outros:</span>
+                        <input type="text" name="Outros" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Registro no Conselho de Classe:</span>
+                        <input type="text" name="Registro no Conselho de Classe" />
+                    </div>
+                    <div class="campo">
+                        <span>Órgão Emissor:</span>
+                        <input type="text" name="Órgão Emissor" />
+                    </div>
+                    <div class="campo">
+                        <span>UF Conselho:</span>
+                        <input type="text" name="UF Conselho" maxlength="2" />
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="campo">
+                        <span>Forma de Contratação com o Estabelecimento:</span>
+                        <input type="text" name="Forma de Contratação com o Estabelecimento" />
+                    </div>
+                    <div class="campo">
+                        <span>Forma de Contratação com o Empregador:</span>
                         <input type="text" name="Forma de Contratação com o Empregador" />
                     </div>
                 </div>
@@ -445,10 +454,10 @@ function abrirFormulario(tipo) {
             <h1>Página em construção</h1>
 
         </section>
-        `
-    }
-    }
-
+        `;
+        }
+        }
+    
 
 
     //  let btn = document.getElementById("btn-copy");
