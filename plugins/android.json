@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-file": {
+      "ANDROIDX_WEBKIT_VERSION": "1.4.0",
+      "PACKAGE_NAME": "com.example.myapp"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.example.myapp"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.example.myapp"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "com.example.myapp"
+    }
+  },
+  "dependent_plugins": {}
+}
